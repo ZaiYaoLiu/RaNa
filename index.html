@@ -4,20 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.js">
+	<link rel="stylesheet" href="style.css">	
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="./index.js"></script>
 	<title>Cars</title>
-	<script>
-
-	</script>
 </head>
 <body>
 	<!-- 導覽列 -->
 	<div class="navbar">
 		<div class="nav__title"></div>
 		<div class="nav__info">
-			<div class="nav__time">時間</div>
-			<div class="nav__language">繁體中文 ▼</div>
+			<div class="nav__time"></div>
+			<select class="nav__language">
+				<option value=""> 繁體中文 </option>
+				<option value=""> 简体中文 </option>
+				<option value=""> English </option>		
+			</select>
 		</div>
 	</div>
 	<!-- 客服 -->
@@ -31,7 +33,7 @@
 			<p class="main__content_2">Choose the car as far as you can</p>
 		</div>
 		<div class="main__front">
-			<form action="" class="login">
+			<form action="/login.php" class="login" method="POST">
 				<div class="login__info">
 					<div>
 						<input type="text" placeholder="amount">
