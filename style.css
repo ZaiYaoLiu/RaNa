@@ -1,14 +1,15 @@
 body {
     background-image: url('img/bg.png');
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .navbar {
     width: 100%;
     height: 60px;
-    box-shadow: 2px 2px 2px 2px #f9f5f5;
+    box-shadow: 2px 2px 2px #b9b6b6;
     background-color: #fff;
     display: flex;
     position: relative;
@@ -20,7 +21,8 @@ body {
     left: 20%;
     top: 20px;
     background-image: url('img/logo.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 60px;
     width: 240px;
 }
@@ -55,12 +57,18 @@ body {
     top: 30%;
     width: 30px;
     height: 30px;
-    z-index: 999;
+    cursor: pointer;
+}
+
+.connection:hover {
+    width: 40px;
+    height: 40px;
 }
 
 .main__title {
     background-image: url('img/bg-car.png');
-    background-size: cover;    
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 450px; 
     color: #fff;
 }
@@ -68,26 +76,25 @@ body {
 .main__content_1 {
     position: absolute;
     left: 35%;
-    top: 30%;
+    top: 280px;
     font-size: 20px;
 }
 
 .main__content_2 {
     position: absolute;
     right: 25%;
-    top: 25%;
+    top: 250px;
     font-size: 28px;
 }
 
 .main__front {
     position: absolute;
-    top: 40%;
+    top: 400px;
     background-image: url('img/car2.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 1200px;
     height: 450px;
-    /* z-index: -1; */
 }
 
 .login{
@@ -147,27 +154,34 @@ body {
     justify-content: space-between;
 }
 
-.btn__left,  .btn__mid, .btn__right {
+.btn__left, .btn__mid, .btn__right {
     background-image: url('img/pic-01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 30%;
     height: 200px;
+    cursor: pointer;
+}
+
+.btn__left:hover, .btn__mid:hover, .btn__right:hover {
+    border: 5px solid rgb(138, 26, 26);
 }
 
 .btn__left {
-    animation-name: toRight;
-    animation-duration: 3s;
+    animation-name: Down;
+    animation-duration: 2s;
     animation-iteration-count: 1;
 }
 
 .btn__mid {
     animation-name: Down;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
 .btn__right {
-    animation-name: toLeft;
-    animation-duration: 7s;
+    animation-name: Down;
+    animation-duration: 2s;
     animation-iteration-count: 1;
 }
 
@@ -179,19 +193,19 @@ body {
 
 .btn__mid img {
     animation-name: Up;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-iteration-count: 1;
 }
 
 .btn__right img {
     animation-name: toRight;
-    animation-duration: 7s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
 @keyframes Up {
     from {
-        transform: translateY(300%);
+        transform: translateY(100%);
     }
     to {
         transform: translateX(0);
@@ -227,6 +241,7 @@ body {
 
 .author {
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     width: 100%;
     background: linear-gradient(90deg, #572dd9, #2d88f8, #572dd9);
@@ -236,6 +251,7 @@ body {
 
 .flooter {
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     width: 100%;
     background-color: black;
@@ -245,4 +261,219 @@ body {
 
 .author p, .flooter p {
     margin: 0 20px;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .nav__title {
+        position: absolute;
+        left: 10%;
+        top: 20px;
+        background-image: url('img/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 240px;
+    }
+    
+    .nav__info {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        right: 10%;
+    }
+
+    .main__front {
+        position: absolute;
+        top: 350px;
+        background-image: url('img/car2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 450px;
+    }
+
+    .login{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30%;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 60px;
+        box-shadow: 2px 2px 2px #b9b6b6;
+        background-color: #fff;
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+
+    .btn {
+        margin: 200px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn__left, .btn__mid, .btn__right {
+        background-image: url('img/pic-01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 12px;
+        width: 30%;
+        height: 200px;
+        cursor: pointer;
+    }
+
+    .main__content_1 {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 250px;
+        font-size: 20px;
+    }
+    
+    .main__content_2 {
+        display: none;
+        position: absolute;
+        right: 25%;
+        top: 280px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .nav__title {
+        position: absolute;
+        left: 2%;
+        top: 20px;
+        background-image: url('img/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 240px;
+    }
+    
+    .nav__info {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        right: 2%;
+    }
+
+    .main__front {
+        position: absolute;
+        top: 250px;
+        background-image: url('img/car2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 450px;
+    }
+
+    .btn {
+        margin: 0 auto;
+        width: 300px;
+        display: block;
+        justify-content: space-between;
+    }
+
+
+    .btn__left, .btn__mid, .btn__right {
+        background-image: url('img/pic-01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 12px;
+        width: 300px;
+        height: 200px;
+        cursor: pointer;
+    }
+
+    .main__content_1 {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 250px;
+        font-size: 20px;
+    }
+    
+    .main__content_2 {
+        display: none;
+        position: absolute;
+        right: 25%;
+        top: 280px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .nav__title {
+        position: absolute;
+        left: 5%;
+        top: 20px;
+        background-image: url('img/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 240px;
+    }
+    
+    .nav__info {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        right: 5%;
+    }
+
+    .nav__time {
+        display: none;
+        padding: 4px;
+        margin-right: 12px;
+    }
+
+    .main__front {
+        position: absolute;
+        top: 200px;
+        background-image: url('img/car2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 450px;
+    }
+
+    .btn {
+        margin: 0 auto;
+        width: 300px;
+        display: block;
+        justify-content: space-between;
+    }
+
+
+    .btn__left, .btn__mid, .btn__right {
+        background-image: url('img/pic-01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 12px;
+        width: 300px;
+        height: 200px;
+        cursor: pointer;
+    }
+
+    .main__content_1 {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 250px;
+        font-size: 20px;
+    }
+    
+    .main__content_2 {
+        display: none;
+        position: absolute;
+        right: 25%;
+        top: 280px;
+        font-size: 28px;
+    }
 }
