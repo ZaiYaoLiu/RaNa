@@ -124,8 +124,14 @@ body {
     height: 80px;
     background: linear-gradient(#ffe6b9, #ffb900, #ffe6b9);
     font-size: 20px;
-    border: 3px inset #ffb900;
+    border: 3px outset #ffb900;
     border-radius: 12px;
+    transition: 2s;
+}
+
+.login__enter:hover {
+    background: linear-gradient(#ffb900, #ffe6b9, #ffb900);
+    border: 3px inset #ffb900;
 }
 
 .login__enter {
