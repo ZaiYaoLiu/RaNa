@@ -89,12 +89,19 @@ body {
 
 .main__front {
     position: absolute;
-    top: 400px;
+    top: 350px;
     background-image: url('img/car2.png');
     background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     width: 1200px;
     height: 450px;
+    transition: 5S;
+}
+
+.main__front:hover {
+    background-position: center center;
+    background-size: cover;
 }
 
 .login{
@@ -126,6 +133,7 @@ body {
     font-size: 20px;
     border: 3px outset #ffb900;
     border-radius: 12px;
+    text-align: center;
     transition: 2s;
 }
 
